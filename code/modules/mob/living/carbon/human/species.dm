@@ -74,6 +74,20 @@ GLOBAL_LIST_EMPTY(patreon_races)
 		OFFSET_UNDIES = list(0,0),\
 	)
 
+	var/list/offset_genitals_m = list(
+		OFFSET_PENIS = list(0,0),\
+		OFFSET_BREASTS = list(0,0),\
+		OFFSET_TESTICLES = list(0,0),\
+		OFFSET_VAGINA = list(0,0),\
+	)
+
+	var/list/offset_genitals_f = list(
+		OFFSET_PENIS = list(0,0),\
+		OFFSET_BREASTS = list(0,0),\
+		OFFSET_TESTICLES = list(0,0),\
+		OFFSET_VAGINA = list(0,0),\
+	)
+
 	/// Type of damage overlay to use
 	var/damage_overlay_type = "human"
 	/// Damage overlays to use for males

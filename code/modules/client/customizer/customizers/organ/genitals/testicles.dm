@@ -21,12 +21,21 @@
 	organ_type = /obj/item/organ/genitals/testicles
 	customizer_entry_type = /datum/customizer_entry/organ/genitals/testicles
 	organ_slot = ORGAN_SLOT_TESTICLES
+	organ_dna_type = /datum/organ_dna/testicles
 	var/can_customize_size = TRUE
 
 /datum/customizer_choice/organ/genitals/testicles/validate_entry(datum/preferences/prefs, datum/customizer_entry/entry)
 	..()
 	var/datum/customizer_entry/organ/genitals/testicles/testicles_entry = entry
 	testicles_entry.ball_size = sanitize_integer(testicles_entry.ball_size, MIN_TESTICLES_SIZE, MAX_TESTICLES_SIZE, DEFAULT_TESTICLES_SIZE)
+
+/datum/customizer_choice/organ/genitals/testicles/imprint_organ_dna(datum/organ_dna/organ_dna, datum/customizer_entry/entry, datum/preferences/prefs)
+	..()
+	var/datum/organ_dna/testicles/testicles_dna = organ_dna
+	var/datum/customizer_entry/organ/genitals/testicles/testicles_entry = entry
+	if(can_customize_size)
+		testicles_dna.ball_size = testicles_entry.ball_size
+	testicles_dna.virility = testicles_entry.virility
 
 /datum/customizer_choice/organ/genitals/testicles/generate_pref_choices(list/dat, datum/preferences/prefs, datum/customizer_entry/entry, customizer_type)
 	..()

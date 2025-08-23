@@ -8,7 +8,7 @@
 	return "[icon_state]_[breasts.breast_size]"
 
 /datum/sprite_accessory/genitals/breasts/adjust_appearance_list(list/appearance_list, obj/item/organ/organ, obj/item/bodypart/bodypart, mob/living/carbon/human/owner)
-	generic_gender_feature_adjust(appearance_list, organ, bodypart, owner, OFFSET_RING)
+	gender_genitals_adjust(appearance_list, organ, bodypart, owner, OFFSET_BREASTS)
 
 /datum/sprite_accessory/genitals/breasts/is_visible(obj/item/organ/organ, obj/item/bodypart/bodypart, mob/living/carbon/human/owner)
 	/*

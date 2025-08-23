@@ -15,6 +15,7 @@
 	customizer_entry_type = /datum/customizer_entry/organ/genitals/vagina
 	organ_type = /obj/item/organ/genitals/vagina
 	organ_slot = ORGAN_SLOT_VAGINA
+	organ_dna_type = /datum/organ_dna/vagina
 
 /datum/customizer_entry/organ/genitals/vagina
 	var/fertility = TRUE
@@ -23,6 +24,12 @@
 	..()
 	var/datum/customizer_entry/organ/genitals/vagina/vagina_entry = entry
 	dat += "<br>Fertile: <a href='?_src_=prefs;task=change_customizer;customizer=[customizer_type];customizer_task=fertile''>[vagina_entry.fertility ? "Fertile" : "Sterile"]</a>"
+
+/datum/customizer_choice/organ/genitals/vagina/imprint_organ_dna(datum/organ_dna/organ_dna, datum/customizer_entry/entry, datum/preferences/prefs)
+	..()
+	var/datum/organ_dna/vagina/vagina_dna = organ_dna
+	var/datum/customizer_entry/organ/genitals/vagina/vagina_entry = entry
+	vagina_dna.fertility = vagina_entry.fertility
 
 /datum/customizer_choice/organ/genitals/vagina/handle_topic(mob/user, list/href_list, datum/preferences/prefs, datum/customizer_entry/entry, customizer_type)
 	..()

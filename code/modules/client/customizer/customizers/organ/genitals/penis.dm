@@ -4,7 +4,6 @@
 	allows_disabling = TRUE
 	default_disabled = TRUE
 	gender_enabled = MALE
-	abstract_type = /datum/customizer/organ/genitals/penis
 
 /datum/customizer/organ/genitals/penis/is_allowed(datum/preferences/prefs)
 	return TRUE
@@ -14,11 +13,19 @@
 	organ_type = /obj/item/organ/genitals/penis
 	organ_slot = ORGAN_SLOT_PENIS
 	customizer_entry_type = /datum/customizer_entry/organ/genitals/penis
+	organ_dna_type = /datum/organ_dna/penis
 
 /datum/customizer_choice/organ/genitals/penis/validate_entry(datum/preferences/prefs, datum/customizer_entry/entry)
 	..()
 	var/datum/customizer_entry/organ/genitals/penis/penis_entry = entry
 	penis_entry.penis_size = sanitize_integer(penis_entry.penis_size, MIN_PENIS_SIZE, MAX_PENIS_SIZE, DEFAULT_PENIS_SIZE)
+
+/datum/customizer_choice/organ/genitals/penis/imprint_organ_dna(datum/organ_dna/organ_dna, datum/customizer_entry/entry, datum/preferences/prefs)
+	..()
+	var/datum/organ_dna/penis/penis_dna = organ_dna
+	var/datum/customizer_entry/organ/genitals/penis/penis_entry = entry
+	penis_dna.penis_size = penis_entry.penis_size
+	penis_dna.functional = penis_entry.functional
 
 /datum/customizer_choice/organ/genitals/penis/generate_pref_choices(list/dat, datum/preferences/prefs, datum/customizer_entry/entry, customizer_type)
 	..()
