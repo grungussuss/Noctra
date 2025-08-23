@@ -75,6 +75,20 @@
 		OFFSET_UNDIES = list(0,0),\
 	)
 
+	offset_genitals_m = list(
+		OFFSET_PENIS = list(0,-4),\
+		OFFSET_BREASTS = list(0,-4),\
+		OFFSET_TESTICLES = list(0,-2),\
+		OFFSET_VAGINA = list(0,-4),\
+	)
+
+	offset_genitals_f = list(
+		OFFSET_PENIS = list(0,4),\
+		OFFSET_BREASTS = list(0,-4),\
+		OFFSET_TESTICLES = list(0,-2),\
+		OFFSET_VAGINA = list(0,-4),\
+	)
+
 	organs = list(
 		ORGAN_SLOT_BRAIN = /obj/item/organ/brain/smooth,
 		ORGAN_SLOT_HEART = /obj/item/organ/heart,

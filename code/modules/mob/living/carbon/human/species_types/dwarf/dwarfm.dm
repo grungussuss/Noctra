@@ -84,6 +84,20 @@
 		OFFSET_UNDIES = list(0,0)\
 	)
 
+	offset_genitals_m = list(
+		OFFSET_PENIS = list(0,-4),\
+		OFFSET_BREASTS = list(0,-4),\
+		OFFSET_TESTICLES = list(0,-2),\
+		OFFSET_VAGINA = list(0,-4),\
+	)
+
+	offset_genitals_f = list(
+		OFFSET_PENIS = list(0,4),\
+		OFFSET_BREASTS = list(0,-4),\
+		OFFSET_TESTICLES = list(0,-2),\
+		OFFSET_VAGINA = list(0,-4),\
+	)
+
 	specstats_m = list(STATKEY_STR = 1, STATKEY_PER = -2, STATKEY_INT = 0, STATKEY_CON = 2, STATKEY_END = 2, STATKEY_SPD = -1, STATKEY_LCK = 0)
 	specstats_f = list(STATKEY_STR = 1, STATKEY_PER = -2, STATKEY_INT = 0, STATKEY_CON = 2, STATKEY_END = 2, STATKEY_SPD = -1, STATKEY_LCK = 0)
 
