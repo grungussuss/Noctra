@@ -32,7 +32,7 @@
 	..()
 	var/datum/customizer_entry/organ/genitals/testicles/testicles_entry = entry
 	if(can_customize_size)
-		dat += "<br>Ball size: <a href='?_src_=prefs;task=change_customizer;customizer=[customizer_type];customizer_task=ball_size''>[find_key_by_value(GLOB.named_ball_sizes, testicles_entry.ball_size)]</a>"
+		dat += "<br>Ball size: <a href='?_src_=prefs;task=change_customizer;customizer=[customizer_type];customizer_task=ball_size''>[find_key_by_value(TESTICLE_SIZES_BY_NAME, testicles_entry.ball_size)]</a>"
 	dat += "<br>Virile: <a href='?_src_=prefs;task=change_customizer;customizer=[customizer_type];customizer_task=virile''>[testicles_entry.virility ? "Virile" : "Sterile"]</a>"
 
 /datum/customizer_choice/organ/genitals/testicles/handle_topic(mob/user, list/href_list, datum/preferences/prefs, datum/customizer_entry/entry, customizer_type)
@@ -40,10 +40,10 @@
 	var/datum/customizer_entry/organ/genitals/testicles/testicles_entry = entry
 	switch(href_list["customizer_task"])
 		if("ball_size")
-			var/named_size = input(user, "Choose your ball size:", "Character Preference", find_key_by_value(GLOB.named_ball_sizes, testicles_entry.ball_size)) as anything in GLOB.named_ball_sizes
+			var/named_size = browser_input_list(user, "Choose your ball size:", "Character Preference", TESTICLE_SIZES_BY_NAME, testicles_entry.ball_size)
 			if(isnull(named_size))
 				return
-			var/new_size = GLOB.named_ball_sizes[named_size]
+			var/new_size = TESTICLE_SIZES_BY_NAME[named_size]
 			testicles_entry.ball_size = sanitize_integer(new_size, MIN_TESTICLES_SIZE, MAX_TESTICLES_SIZE, DEFAULT_TESTICLES_SIZE)
 		if("virile")
 			testicles_entry.virility = !testicles_entry.virility
