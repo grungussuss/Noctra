@@ -445,8 +445,12 @@ GLOBAL_LIST_EMPTY(patreon_races)
 /datum/species/proc/random_underwear(gender)
 	var/list/spec_undies = get_spec_undies_list(gender)
 	if(LAZYLEN(spec_undies))
+		/* Readd when we have inventory underwear?
 		var/datum/sprite_accessory/underwear = pick(spec_undies)
+
 		return underwear.name
+		*/
+		return "Nude"
 
 /datum/species/proc/regenerate_icons(mob/living/carbon/human/H)
 	return FALSE

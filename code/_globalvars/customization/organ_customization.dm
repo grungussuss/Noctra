@@ -7,6 +7,8 @@ GLOBAL_LIST_INIT(customizers, build_customizers())
 		if(is_abstract(type))
 			continue
 		.[type] = new type()
+		if(istype(type, /datum/customizer_choice/organ/genitals))
+			var/hi = type
 	return .
 
 /proc/build_customizers()
@@ -15,6 +17,8 @@ GLOBAL_LIST_INIT(customizers, build_customizers())
 		if(is_abstract(type))
 			continue
 		.[type] = new type()
+		if(istype(type, /datum/customizer_choice/organ/genitals))
+			var/hi = type
 	return .
 
 /proc/color_pick_sanitized_lumi(mob/user, description, title, default_value, min_lumi = 0.07, max_lumi = 1.0)

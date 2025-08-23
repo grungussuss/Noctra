@@ -34,6 +34,10 @@
 /proc/random_underwear(gender)
 	if(!GLOB.underwear_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/underwear, GLOB.underwear_list, GLOB.underwear_m, GLOB.underwear_f)
+
+	. = "Nude"
+	if(prob(50))
+		return
 	switch(gender)
 		if(MALE)
 			return pick(GLOB.underwear_m)
