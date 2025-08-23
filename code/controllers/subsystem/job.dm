@@ -23,8 +23,7 @@ SUBSYSTEM_DEF(job)
 
 /datum/controller/subsystem/job/Initialize(timeofday)
 	/* Noctra procs BEGIN */
-	younglings_assertion()
-	remove_empty_jobs()
+	remove_younglings()
 	/* Noctra procs END */
 	if(!length(all_occupations))
 		SetupOccupations()
@@ -51,8 +50,7 @@ SUBSYSTEM_DEF(job)
 		SSmapping.map_adjustment.job_change()
 
 	/* Noctra procs BEGIN */
-	younglings_assertion()
-	remove_empty_jobs()
+	remove_younglings()
 	/* Noctra procs END */
 
 	return TRUE
