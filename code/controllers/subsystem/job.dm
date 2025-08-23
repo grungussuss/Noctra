@@ -22,6 +22,10 @@ SUBSYSTEM_DEF(job)
 	var/list/level_order = list(JP_HIGH,JP_MEDIUM,JP_LOW)
 
 /datum/controller/subsystem/job/Initialize(timeofday)
+	/* Noctra procs BEGIN */
+	younglings_assertion()
+	remove_empty_jobs()
+	/* Noctra procs END */
 	if(!length(all_occupations))
 		SetupOccupations()
 	return ..()
@@ -40,11 +44,17 @@ SUBSYSTEM_DEF(job)
 		all_occupations += job
 		name_occupations[job.title] = job
 		type_occupations[job_type] = job
-		if(job.job_flags & JOB_NEW_PLAYER_JOINABLE)
+		if(job.job_flags & JOB_NEW_PLAYER_JOINABLE && (job.allowed_ages != list(AGE_CHILD)))
 			joinable_occupations += job
 
 	if(SSmapping.map_adjustment)
 		SSmapping.map_adjustment.job_change()
+
+	/* Noctra procs BEGIN */
+	younglings_assertion()
+	remove_empty_jobs()
+	/* Noctra procs END */
+
 	return TRUE
 
 /datum/controller/subsystem/job/proc/GetJob(rank)

@@ -7,7 +7,6 @@
 		human_mob = new()
 
 		if(human_mob.age == AGE_CHILD)
-			fuck += a_mob.type
-
-		qdel(a_mob)
+			fuck += human_mob.type
+		qdel(human_mob)
 
