@@ -6,7 +6,7 @@
 	abstract_type = /datum/sprite_accessory/genitals/penis
 
 /datum/sprite_accessory/genitals/penis/adjust_appearance_list(list/appearance_list, obj/item/organ/organ, obj/item/bodypart/bodypart, mob/living/carbon/owner)
-	gender_genitals_adjust(appearance_list, organ, bodypart, owner, OFFSET_BELT)
+	gender_genitals_adjust(appearance_list, organ, bodypart, owner, OFFSET_PENIS)
 
 /datum/sprite_accessory/genitals/penis/get_icon_state(obj/item/organ/organ, obj/item/bodypart/bodypart, mob/living/carbon/owner)
 	var/obj/item/organ/genitals/penis/penis = organ
