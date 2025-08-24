@@ -377,7 +377,9 @@ GLOBAL_LIST_EMPTY(fake_ckeys)
 	if(!key || !istext(key))
 		return "some invalid"
 	var/ckey = ckey(key)
-	return GLOB.fake_ckeys[ckey] || ckey
+	if(ckey in GLOB.anonymize)
+		return GLOB.fake_ckeys[ckey] || ckey
+	return ckey
 
 /proc/add_key_to_anonymized_keys(ckey)
 	if(isnull(GLOB.fake_ckeys[ckey]))
