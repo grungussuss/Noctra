@@ -78,5 +78,7 @@ SUBSYSTEM_DEF(nightshift)
 		if(HAS_TRAIT(src, TRAIT_NOSLEEP))
 			return ..()
 		if(tiredness >= 100)
+			/*
 			apply_status_effect(/datum/status_effect/debuff/sleepytime)
+			*/
 		apply_status_effect(/datum/status_effect/debuff/dreamytime)

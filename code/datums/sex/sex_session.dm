@@ -112,8 +112,10 @@
 	action.on_start(user, target)
 
 	while(TRUE)
+		/*
 		if(isnull(target.client))
 			break
+		*/
 
 		var/stamina_cost = action.stamina_cost * get_stamina_cost_multiplier()
 		if(!user.adjust_stamina(-stamina_cost))

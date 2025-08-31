@@ -319,7 +319,7 @@
 
 /atom/movable/screen/fov_blocker
 	icon = 'icons/mob/vision_cone.dmi'
-	icon_state = "combat_v"
+	icon_state = "none"
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	plane = FIELD_OF_VISION_BLOCKER_PLANE
 	screen_loc = "1,1"
