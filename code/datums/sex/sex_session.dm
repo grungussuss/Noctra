@@ -238,7 +238,7 @@
 	force = clamp(force + amt, SEX_FORCE_MIN, SEX_FORCE_MAX)
 
 /datum/sex_session/proc/finished_check()
-	if(!do_until_finished)
+	if(do_until_finished)
 		return FALSE
 	return TRUE
 
