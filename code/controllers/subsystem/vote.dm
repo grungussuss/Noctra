@@ -143,6 +143,7 @@ SUBSYSTEM_DEF(vote)
 			if("map")
 				SSmapping.changemap(global.config.maplist[.])
 				SSmapping.map_voted = TRUE
+			/*
 			if("endround")
 				if(. == "Continue Playing")
 					log_game("LOG VOTE: CONTINUE PLAYING AT [REALTIMEOFDAY]")
@@ -153,6 +154,7 @@ SUBSYSTEM_DEF(vote)
 					to_chat(world, "\n<font color='purple'>[ROUND_END_TIME_VERBAL]</font>")
 					SSgamemode.roundvoteend = TRUE
 					SSgamemode.round_ends_at = GLOB.round_timer + ROUND_END_TIME
+			*/
 			if("storyteller")
 				SSgamemode.storyteller_vote_result(.)
 
