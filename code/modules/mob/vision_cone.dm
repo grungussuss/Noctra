@@ -318,14 +318,14 @@
 	PM.backdrop(src)
 
 /atom/movable/screen/fov_blocker
-	icon = 'icons/mob/vision_cone.dmi'
+	icon = null
 	icon_state = "none"
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	plane = FIELD_OF_VISION_BLOCKER_PLANE
 	screen_loc = "1,1"
 
 /atom/movable/screen/fov
-	icon = 'icons/mob/vision_cone.dmi'
+	icon = null
 	icon_state = "combat"
 	name = " "
 	screen_loc = "1,1"

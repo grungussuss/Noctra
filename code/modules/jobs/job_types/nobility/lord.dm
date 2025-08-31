@@ -22,7 +22,7 @@ GLOBAL_LIST_EMPTY(lord_titles)
 		/datum/action/cooldown/spell/undirected/list_target/grant_nobility,
 	)
 
-	allowed_races = RACES_PLAYER_ROYALTY
+	allowed_races = RACES_PLAYER_ALL
 	outfit = /datum/outfit/job/lord
 	bypass_lastclass = TRUE
 	give_bank_account = 500
