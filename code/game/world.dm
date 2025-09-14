@@ -400,7 +400,7 @@ GLOBAL_PROTECT(tracy_init_reason)
 /world/proc/update_status()
 	var/s = ""
 	s += "<center><a href=\"https://discord.gg/zNAGFDcQ\">"
-	s += "<big><b>Vanderlin - Now 24/7 (Hosted by Monkestation)</b></big></a><br>"
+	s += "<big><b>[CONFIG_GET(string/servername)]</b></big></a><br>"
 	s += "<b>Dark Medieval Fantasy Roleplay<b><br>"
 	s += "\["
 	if(SSticker.current_state <= GAME_STATE_PREGAME)
