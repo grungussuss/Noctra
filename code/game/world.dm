@@ -399,7 +399,7 @@ GLOBAL_PROTECT(tracy_init_reason)
 
 /world/proc/update_status()
 	var/s = ""
-	// s += "<center><a href=\"https://discord.gg/zNAGFDcQ\">"
+	s += "<center><a href=\"https://discord.noctragame.com/\">"
 	s += "<big><b>[CONFIG_GET(string/servername)]</b></big></a><br>"
 	s += "<b>Dark Medieval Fantasy Roleplay<b><br>"
 	s += "\["
