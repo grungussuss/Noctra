@@ -22,9 +22,13 @@
 	prevent_crits = ALL_EXCEPT_BLUNT
 	max_integrity = INTEGRITY_STRONGEST
 	item_weight = 25 * BRONZE_MULTIPLIER
+<<<<<<< HEAD
 	stand_speed_reduction = 0.6
 <<<<<<< HEAD
 =======
+=======
+	stand_speed_reduction = 1.4
+>>>>>>> vanderlin/main
 
 	smeltresult = /obj/item/ingot/bronze
 >>>>>>> vanderlin/main
